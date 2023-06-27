@@ -56,8 +56,8 @@ const ShoppingCart = () => {
     axios
       .post(`${API_URL}/cart/checkout`, {}, config)
       .then((response) => {
-        toast.success('Items checked out successfully!');
         navigate('/dashboard');
+        toast.success('Items checked out successfully!');
       })
       .catch((error) => {
         toast.error(error?.response?.data?.message || 'Failed to check out items.');

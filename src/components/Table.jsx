@@ -14,7 +14,7 @@ function Table() {
   const fetchData = async () => {
     try {
       const response = await axios.get(`${API_URL}/reports/purchases`, config);
-      setData(response?.data);   //populate the data array with the response data vehicles
+      setData(response?.data);   //populate the data array with the response data
     } catch (error) {
       console.log(error);
     }
